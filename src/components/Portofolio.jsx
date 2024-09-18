@@ -105,7 +105,7 @@ const Portofolio = () => {
           {selectedProject && (
             <>
               <div className="modal-overlay" onClick={() => setSelectedProject(null)}></div>
-              <div className="modal show" style={{ display: 'block' }} onClick={() => setSelectedProject(null)}>
+              <div className="modal show" style={{ display: 'block' }}>
                 <div className="modal-dialog modal-dialog-centered">
                   <div className="modal-content">
                     <div className="modal-header">
