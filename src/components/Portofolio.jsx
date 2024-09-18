@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const portfolioItems = [
-  { src: './public/assets/img/Portofolio/Monitoring_gates.png', category: ['IoT', 'Web'], title: 'monitoring and controlling irrigation gates', description: 'This project was created at the request of a client who used our services.', type: 'Team', link: 'https://github.com/usama09-cpu/WEB-Monitoring_dan_Kontrol_Gerbang.git' },
-  { src: './public/assets/img/Portofolio/pcb_deffect.jpeg', category: ['DL'], title: 'EUFORIA - PCB DEffect', description: 'This project was created to fulfill the final project requirements for graduating from MSIB5 Startup Campus - Artificial Intelligence.', type: 'Team', link: 'https://github.com/usama09-cpu/Euforia.git' },
-  { src: './public/assets/img/Portofolio/patient_monitor.png', category: ['IoT'], title: 'Mp4 hd - Patient monitor', description: 'This project was created to fulfill the final project requirements for MSIB6 Stechoq - Hardware Engineering graduation.', type: 'Team', link: 'https://github.com/usama09-cpu/IOT-MP4HD-Patient_Monitor.git' },
-  { src: './public/assets/img/Portofolio/web_pramuka.png', category: ['Web'], title: 'Landing page - pramuka smansa poso', description: 'This project was created as a gift for the Poso SMANSA scouts.', type: 'Individual', link: 'https://github.com/usama09-cpu/WEB-Frontend-React--pramuka_smansa_poso.git' },
+  { src: './assets/img/Portofolio/Monitoring_gates.png', category: ['IoT', 'Web'], title: 'monitoring and controlling irrigation gates', description: 'This project was created at the request of a client who used our services.', type: 'Team', link: 'https://github.com/usama09-cpu/WEB-Monitoring_dan_Kontrol_Gerbang.git' },
+  { src: './assets/img/Portofolio/pcb_deffect.jpeg', category: ['DL'], title: 'EUFORIA - PCB DEffect', description: 'This project was created to fulfill the final project requirements for graduating from MSIB5 Startup Campus - Artificial Intelligence.', type: 'Team', link: 'https://github.com/usama09-cpu/Euforia.git' },
+  { src: './assets/img/Portofolio/patient_monitor.png', category: ['IoT'], title: 'Mp4 hd - Patient monitor', description: 'This project was created to fulfill the final project requirements for MSIB6 Stechoq - Hardware Engineering graduation.', type: 'Team', link: 'https://github.com/usama09-cpu/IOT-MP4HD-Patient_Monitor.git' },
+  { src: './assets/img/Portofolio/web_pramuka.png', category: ['Web'], title: 'Landing page - pramuka smansa poso', description: 'This project was created as a gift for the Poso SMANSA scouts.', type: 'Individual', link: 'https://github.com/usama09-cpu/WEB-Frontend-React--pramuka_smansa_poso.git' },
 ];
 
 const Portofolio = () => {

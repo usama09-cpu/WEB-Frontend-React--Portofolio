@@ -29,7 +29,7 @@ const Header = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-              <img className="img-fluid w-100 rounded-circle shadow-lg" src="./public/assets/img/profile.jpg" alt="Profile" />
+              <img className="img-fluid w-100 rounded-circle shadow-lg" src="./assets/img/profile.jpg" alt="Profile" />
             </div>
             <div className="col-lg-7 text-center text-lg-left">
               <h3 className="text-white font-weight-normal mb-3">I'm</h3>

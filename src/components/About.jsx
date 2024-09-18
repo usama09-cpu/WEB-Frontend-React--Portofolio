@@ -9,7 +9,7 @@ const About = () => {
           </div>
           <div className="row align-items-center">
             <div className="col-lg-5 pb-4 pb-lg-0">
-              <img className="img-fluid rounded w-100" src="./public/assets/img/profile.jpg" alt="About Me" />
+              <img className="img-fluid rounded w-100" src="./assets/img/profile.jpg" alt="About Me" />
             </div>
             <div className="col-lg-7">
               <h3 className="mb-4">An enthusiast with a passion for Embedded Systems, IoT, and Robotics.</h3>
