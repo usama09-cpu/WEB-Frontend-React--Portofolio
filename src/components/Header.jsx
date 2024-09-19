@@ -36,7 +36,7 @@ const Header = () => {
               <h1 className="display-3 text-uppercase text-primary mb-2" style={{ WebkitTextStroke: '2px #ffffff' }}>USAMA</h1>
               <h1 className="typed-text-output d-inline font-weight-lighter text-white"></h1>
               <div className="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                <a href="./public/assets/cv/cv.pdf" className="btn btn-outline-light mr-5" target="_blank" rel="noopener noreferrer">Download CV</a>
+                <a href="./assets/cv/cv.pdf" className="btn btn-outline-light mr-5" target="_blank" rel="noopener noreferrer">Download CV</a>
                 <button type="button" className="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                   <span></span>
                 </button>
