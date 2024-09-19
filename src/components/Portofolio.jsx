@@ -13,7 +13,8 @@ const portfolioItems = [
     src: './assets/img/Portofolio/pcb_deffect.jpeg',
     category: ['DL'],
     title: 'EUFORIA - PCB DEffect',
-    description: 'This project was created to fulfill the final project requirements for graduating from MSIB5 Startup Campus - Artificial Intelligence.',
+    description:
+      'This project was created to fulfill the final project requirements for graduating from MSIB5 Startup Campus - Artificial Intelligence.',
     type: 'Team',
     link: 'https://github.com/usama09-cpu/Euforia.git',
   },
@@ -21,7 +22,8 @@ const portfolioItems = [
     src: './assets/img/Portofolio/patient_monitor.png',
     category: ['IoT'],
     title: 'Mp4 hd - Patient monitor',
-    description: 'This project was created to fulfill the final project requirements for MSIB6 Stechoq - Hardware Engineering graduation.',
+    description:
+      'This project was created to fulfill the final project requirements for MSIB6 Stechoq - Hardware Engineering graduation.',
     type: 'Team',
     link: 'https://github.com/usama09-cpu/IOT-MP4HD-Patient_Monitor.git',
   },
@@ -45,20 +47,18 @@ const Portofolio = () => {
 
   const handleCategoryFilterClick = (category) => {
     setCategoryFilters((prevFilters) =>
-      prevFilters.includes(category) ? prevFilters.filter((c) => c !== category) : [...prevFilters, category]
+      prevFilters.includes(category)
+        ? prevFilters.filter((c) => c !== category)
+        : [...prevFilters, category]
     );
-    setTimeout(() => {
-      document.activeElement.blur();
-    }, 10);
   };
 
   const handleTypeFilterClick = (type) => {
     setTypeFilters((prevFilters) =>
-      prevFilters.includes(type) ? prevFilters.filter((t) => t !== type) : [...prevFilters, type]
+      prevFilters.includes(type)
+        ? prevFilters.filter((t) => t !== type)
+        : [...prevFilters, type]
     );
-    setTimeout(() => {
-      document.activeElement.blur();
-    }, 10);
   };
 
   const handleImageClick = (item) => {
@@ -90,7 +90,6 @@ const Portofolio = () => {
                 <li
                   className={`btn btn-sm btn-outline-primary m-1 ${categoryFilters.length === 0 ? 'active' : ''}`}
                   onClick={() => setCategoryFilters([])}
-                  onTouchEnd={() => setCategoryFilters([])}
                 >
                   All Categories
                 </li>
@@ -101,7 +100,6 @@ const Portofolio = () => {
                       categoryFilters.includes(category) ? 'active' : ''
                     }`}
                     onClick={() => handleCategoryFilterClick(category)}
-                    onTouchEnd={() => handleCategoryFilterClick(category)}
                   >
                     {category.charAt(0).toUpperCase() + category.slice(1)}
                   </li>
@@ -111,7 +109,6 @@ const Portofolio = () => {
                 <li
                   className={`btn btn-sm btn-outline-primary m-1 ${typeFilters.length === 0 ? 'active' : ''}`}
                   onClick={() => setTypeFilters([])}
-                  onTouchEnd={() => setTypeFilters([])}
                 >
                   All Types
                 </li>
@@ -122,7 +119,6 @@ const Portofolio = () => {
                       typeFilters.includes(type) ? 'active' : ''
                     }`}
                     onClick={() => handleTypeFilterClick(type)}
-                    onTouchEnd={() => handleTypeFilterClick(type)}
                   >
                     {type.charAt(0).toUpperCase() + type.slice(1)}
                   </li>
