@@ -168,7 +168,7 @@ const Portofolio = () => {
                         src={selectedProject.src}
                         alt={selectedProject.title}
                       />
-                      <p>{selectedProject.description}</p>
+                      <p className="text-justify">{selectedProject.description}</p>
                       <p>
                         <strong>Type :</strong> {selectedProject.type}
                       </p>

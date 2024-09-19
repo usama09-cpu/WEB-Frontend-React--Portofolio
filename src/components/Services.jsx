@@ -64,7 +64,7 @@ const Services = () => {
                   <i className={`fa fa-2x ${service.icon} service-icon bg-primary text-white mr-3`}></i>
                   <h4 className="font-weight-bold m-0">{service.title}</h4>
                 </div>
-                <p>{service.description}</p>
+                <p className="text-justify">{service.description}</p>
                 <a className="border-bottom border-primary text-decoration-none" href="">Read More</a>
               </div>
             ))}
