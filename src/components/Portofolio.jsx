@@ -35,6 +35,14 @@ const portfolioItems = [
     type: 'Individual',
     link: 'https://github.com/usama09-cpu/WEB-Frontend-React--pramuka_smansa_poso.git',
   },
+  {
+    src: './assets/img/Portofolio/Monitoring_tumbuhan.png',
+    category: ['IoT'],
+    title: 'IoT - Plant Monitoring',
+    description: 'This project was developed at the request of a client, focusing on the research and analysis of plants. In this project, I was responsible for implementing technology-based solutions to assist in the collection and processing of plant-related data. The approach used prioritizes efficiency and accuracy in supporting research needs, as well as fostering a deeper understanding of plant characteristics. By utilizing cutting-edge technology, this project successfully delivered significant results and met the client’s expectations.',
+    type: 'Individual',
+    link: 'https://github.com/usama09-cpu/IOT-Monitoring_Tumbuhan.git',
+  },
 ];
 
 const Portofolio = () => {
