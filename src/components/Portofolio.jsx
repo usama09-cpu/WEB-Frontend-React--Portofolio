@@ -54,20 +54,34 @@ const Portofolio = () => {
   const types = Array.from(new Set(portfolioItems.map((item) => item.type)));
 
   const handleCategoryFilterClick = (category) => {
-    setCategoryFilters((prevFilters) =>
-      prevFilters.includes(category)
+    setCategoryFilters((prevFilters) => {
+      const updatedFilters = prevFilters.includes(category)
         ? prevFilters.filter((c) => c !== category)
-        : [...prevFilters, category]
-    );
-  };
+        : [...prevFilters, category];
+  
+      // Jika semua kategori dipilih, reset menjadi kosong (All Categories aktif)
+      if (updatedFilters.length === categories.length) {
+        return [];
+      }
+  
+      return updatedFilters;
+    });
+  };  
 
   const handleTypeFilterClick = (type) => {
-    setTypeFilters((prevFilters) =>
-      prevFilters.includes(type)
+    setTypeFilters((prevFilters) => {
+      const updatedFilters = prevFilters.includes(type)
         ? prevFilters.filter((t) => t !== type)
-        : [...prevFilters, type]
-    );
-  };
+        : [...prevFilters, type];
+  
+      // Jika semua tipe dipilih, reset menjadi kosong (All Types aktif)
+      if (updatedFilters.length === types.length) {
+        return [];
+      }
+  
+      return updatedFilters;
+    });
+  };  
 
   const handleImageClick = (item) => {
     setSelectedProject(item);
@@ -97,7 +111,7 @@ const Portofolio = () => {
               <ul className="list-inline mb-4" id="portfolio-flters">
                 <li
                   className={`btn btn-sm btn-outline-primary m-1 ${categoryFilters.length === 0 ? 'active' : ''}`}
-                  onClick={() => setCategoryFilters([])}
+                  onClick={() => handleCategoryFilterClick('All Categories')}
                 >
                   All Categories
                 </li>
@@ -116,7 +130,7 @@ const Portofolio = () => {
               <ul className="list-inline mb-4" id="portfolio-type-flters">
                 <li
                   className={`btn btn-sm btn-outline-primary m-1 ${typeFilters.length === 0 ? 'active' : ''}`}
-                  onClick={() => setTypeFilters([])}
+                  onClick={() => handleTypeFilterClick('All Types')}
                 >
                   All Types
                 </li>
