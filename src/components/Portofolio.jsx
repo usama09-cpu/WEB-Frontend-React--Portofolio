@@ -54,34 +54,42 @@ const Portofolio = () => {
   const types = Array.from(new Set(portfolioItems.map((item) => item.type)));
 
   const handleCategoryFilterClick = (category) => {
-    setCategoryFilters((prevFilters) => {
-      const updatedFilters = prevFilters.includes(category)
-        ? prevFilters.filter((c) => c !== category)
-        : [...prevFilters, category];
-  
-      // Jika semua kategori dipilih, reset menjadi kosong (All Categories aktif)
-      if (updatedFilters.length === categories.length) {
-        return [];
-      }
-  
-      return updatedFilters;
-    });
-  };  
+    if (category === 'All Categories') {
+      // Jika tombol "All Categories" diklik, reset filter
+      setCategoryFilters([]);
+    } else {
+      setCategoryFilters((prevFilters) => {
+        const updatedFilters = prevFilters.includes(category)
+          ? prevFilters.filter((c) => c !== category)
+          : [...prevFilters, category];
 
+          if (updatedFilters.length === categories.length) {
+            return [];
+          }
+
+        return updatedFilters;
+      });
+    }
+  };
+  
   const handleTypeFilterClick = (type) => {
-    setTypeFilters((prevFilters) => {
-      const updatedFilters = prevFilters.includes(type)
-        ? prevFilters.filter((t) => t !== type)
-        : [...prevFilters, type];
+    if (type === 'All Types') {
+      // Jika tombol "All Types" diklik, reset filter
+      setTypeFilters([]);
+    } else {
+      setTypeFilters((prevFilters) => {
+        const updatedFilters = prevFilters.includes(type)
+          ? prevFilters.filter((t) => t !== type)
+          : [...prevFilters, type];
+
+          if (updatedFilters.length === types.length) {
+            return [];
+          }
+        return updatedFilters;
+      });
+    }
+  };
   
-      // Jika semua tipe dipilih, reset menjadi kosong (All Types aktif)
-      if (updatedFilters.length === types.length) {
-        return [];
-      }
-  
-      return updatedFilters;
-    });
-  };  
 
   const handleImageClick = (item) => {
     setSelectedProject(item);
