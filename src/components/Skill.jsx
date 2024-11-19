@@ -12,17 +12,26 @@ const skills = [
   { name: 'Python' },
   { name: 'JavaScript' },
   { name: 'Node.js' },
-  { name: 'React' },
+  { name: 'React js' },
+  { name: 'Express js' },
   { name: 'HTML5' },
   { name: 'CSS3' },
   { name: 'Tailwind' },
   { name: 'MySQL' },
   { name: 'PyTorch' },
   { name: 'Arduino' },
-  { name: 'ESP32' },
+  { name: 'ESP' },
   { name: 'LoRa' },
   // { name: 'ROS (Robot Operating System)' },
-  { name: 'Figma' }
+  { name: 'Figma' },
+  { name: 'Illustrator' },
+  { name: 'CorelDraw' },
+  { name: 'Photoshop' },
+  // { name: 'Adobe Premiere Pro' },
+  { name: 'After Effects' },
+  { name: 'Fritzing'},
+  {name: 'Proteus'},
+  {name: 'Wokwi'}
 ];
 
 const Skill = () => {
