@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <div className="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+      <div className="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5" id="footer">
         <div className="container text-center py-5">
           <div className="d-flex justify-content-center mb-4">
             <a className="btn btn-light btn-social mr-2" href="https://www.instagram.com/uusaamaa_/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>

@@ -35,7 +35,7 @@ const Navbar = () => {
               Portfolio
             </a>
           </div>
-          <a href="/" className="btn btn-outline-primary d-none d-lg-block">
+          <a href="#footer" className="btn btn-outline-primary d-none d-lg-block">
             Hire Me
           </a>
         </div>
