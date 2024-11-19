@@ -31,6 +31,7 @@ const skills = [
   { name: 'After Effects' },
   { name: 'Fritzing'},
   {name: 'Proteus'},
+  {name: 'EasyEDA'},
   {name: 'Wokwi'}
 ];
 
