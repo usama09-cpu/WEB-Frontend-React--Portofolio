@@ -10044,3 +10044,8 @@ h6,
   object-fit: cover;
   aspect-ratio: 16/9;
 }
+
+.bodymodal{
+  max-height: 70vh;
+  overflow: auto;
+}

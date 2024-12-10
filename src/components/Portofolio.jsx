@@ -192,7 +192,7 @@ const Portofolio = () => {
                         onClick={() => setSelectedProject(null)}
                       ></button>
                     </div>
-                    <div className="modal-body">
+                    <div className="bodymodal modal-body">
                       <img
                         className="img-fluid w-100 rounded mb-3"
                         src={selectedProject.src}
