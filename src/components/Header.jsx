@@ -32,7 +32,7 @@ const Header = () => {
               <img className="img-fluid w-100 rounded-circle shadow-lg" src="./assets/img/profile.jpg" alt="Profile" />
             </div>
             <div className="col-lg-7 text-center text-lg-left">
-              <h3 className="text-white font-weight-normal mb-3">I'm</h3>
+              <h3 className="text-white font-weight-normal mb-3">{"I'm"}</h3>
               <h1 className="display-3 text-uppercase text-primary mb-2" style={{ WebkitTextStroke: '2px #ffffff' }}>USAMA</h1>
               <h1 className="typed-text-output d-inline font-weight-lighter text-white"></h1>
               <div className="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">

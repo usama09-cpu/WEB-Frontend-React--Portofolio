@@ -8,31 +8,32 @@ const skills = [
   // { name: 'Web Development' },
   // { name: 'Machine Learning' },
   // { name: 'Deep Learning' },
-  { name: 'C/C++' },
-  { name: 'Python' },
-  { name: 'JavaScript' },
-  { name: 'Node.js' },
-  { name: 'React js' },
-  { name: 'Express js' },
-  { name: 'HTML5' },
-  { name: 'CSS3' },
-  { name: 'Tailwind' },
-  { name: 'MySQL' },
-  { name: 'PyTorch' },
-  { name: 'Arduino' },
-  { name: 'ESP' },
-  { name: 'LoRa' },
+  { name: "C/C++" },
+  { name: "Python" },
+  { name: "JavaScript" },
+  { name: "Node.js" },
+  { name: "React js" },
+  { name: "React Native js" },
+  { name: "Express js" },
+  { name: "HTML5" },
+  { name: "CSS3" },
+  { name: "Tailwind" },
+  { name: "MySQL" },
+  { name: "PyTorch" },
+  { name: "Arduino" },
+  { name: "ESP" },
+  { name: "LoRa" },
   // { name: 'ROS (Robot Operating System)' },
-  { name: 'Figma' },
-  { name: 'Illustrator' },
-  { name: 'CorelDraw' },
-  { name: 'Photoshop' },
+  { name: "Figma" },
+  { name: "Illustrator" },
+  { name: "CorelDraw" },
+  { name: "Photoshop" },
   // { name: 'Adobe Premiere Pro' },
-  { name: 'After Effects' },
-  { name: 'Fritzing'},
-  {name: 'Proteus'},
-  {name: 'EasyEDA'},
-  {name: 'Wokwi'}
+  { name: "After Effects" },
+  { name: "Fritzing" },
+  { name: "Proteus" },
+  { name: "EasyEDA" },
+  { name: "Wokwi" },
 ];
 
 const Skill = () => {
@@ -44,19 +45,45 @@ const Skill = () => {
       <div className="container-fluid py-5" id="skill">
         <div className="container">
           <div className="position-relative d-flex align-items-center justify-content-center">
-            <h1 className="display-1 text-uppercase text-white" style={{ WebkitTextStroke: '1px #dee2e6' }}>
+            <h1
+              className="display-1 text-uppercase text-white"
+              style={{ WebkitTextStroke: "1px #dee2e6" }}
+            >
               Skills
             </h1>
-            <h1 className="position-absolute text-uppercase text-primary">My Skills</h1>
+            <h1 className="position-absolute text-uppercase text-primary">
+              My Skills
+            </h1>
           </div>
 
           <div className="text-center">
-            <div className="position-relative" style={{ width: '100%', height: '100%' }}>
-              <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" style={{ padding: '10px' }}>
+            <div
+              className="position-relative"
+              style={{ width: "100%", height: "100%" }}
+            >
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="xMidYMid meet"
+                style={{ padding: "10px" }}
+              >
                 <defs>
-                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#00b894', stopOpacity: 1 }} />
-                    <stop offset="100%" style={{ stopColor: '#00b894', stopOpacity: 0 }} />
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      style={{ stopColor: "#00b894", stopOpacity: 1 }}
+                    />
+                    <stop
+                      offset="100%"
+                      style={{ stopColor: "#00b894", stopOpacity: 0 }}
+                    />
                   </linearGradient>
                 </defs>
 
@@ -68,33 +95,50 @@ const Skill = () => {
                   const y = 50 + radius * Math.sin(angle * (Math.PI / 180));
                   const textRadius = radius + textOffset;
 
-                  const textX = 50 + textRadius * Math.cos(angle * (Math.PI / 180));
-                  const textY = 50 + textRadius * Math.sin(angle * (Math.PI / 180));
-                  const rotateText = angle > 90 && angle < 270 ? angle + 180 : angle;
-                  const textAnchor = angle > 90 && angle < 270 ? 'end' : 'start';
+                  const textX =
+                    50 + textRadius * Math.cos(angle * (Math.PI / 180));
+                  const textY =
+                    50 + textRadius * Math.sin(angle * (Math.PI / 180));
+                  const rotateText =
+                    angle > 90 && angle < 270 ? angle + 180 : angle;
+                  const textAnchor =
+                    angle > 90 && angle < 270 ? "end" : "start";
 
                   return (
                     <g key={index}>
                       {skills.slice(index + 1).map((_, nextIndex) => {
-                        const nextAngle = (360 / skills.length) * (index + 1 + nextIndex);
-                        const nextX = 50 + radius * Math.cos(nextAngle * (Math.PI / 180));
-                        const nextY = 50 + radius * Math.sin(nextAngle * (Math.PI / 180));
+                        const nextAngle =
+                          (360 / skills.length) * (index + 1 + nextIndex);
+                        const nextX =
+                          50 + radius * Math.cos(nextAngle * (Math.PI / 180));
+                        const nextY =
+                          50 + radius * Math.sin(nextAngle * (Math.PI / 180));
                         return (
                           <line
                             key={nextIndex}
-                            x1={`${x}%`} y1={`${y}%`}
-                            x2={`${nextX}%`} y2={`${nextY}%`}
+                            x1={`${x}%`}
+                            y1={`${y}%`}
+                            x2={`${nextX}%`}
+                            y2={`${nextY}%`}
                             stroke="url(#gradient)"
                             strokeWidth="0.2"
-                            style={{ animation: 'gradientAnimation 3s linear infinite' }}
+                            style={{
+                              animation: "gradientAnimation 3s linear infinite",
+                            }}
                           />
                         );
                       })}
 
-                      <circle cx={`${x}%`} cy={`${y}%`} r="0.5" fill="#00b894" />
+                      <circle
+                        cx={`${x}%`}
+                        cy={`${y}%`}
+                        r="0.5"
+                        fill="#00b894"
+                      />
 
                       <text
-                        x={`${textX}%`} y={`${textY}%`}
+                        x={`${textX}%`}
+                        y={`${textY}%`}
                         fill="black"
                         textAnchor={textAnchor}
                         alignmentBaseline="middle"
