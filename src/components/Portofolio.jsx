@@ -234,7 +234,8 @@ const Portofolio = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {selectedProject.link}
+                          {/* {selectedProject.link} */}
+                          Click Here
                         </a>
                       </p>
                     </div>
