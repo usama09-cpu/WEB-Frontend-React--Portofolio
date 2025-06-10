@@ -4,7 +4,7 @@ const portfolioItems = [
   {
     src: "./assets/img/Portofolio/Monitoring_gates.png",
     category: ["IoT", "Web"],
-    title: "monitoring and controlling irrigation gates",
+    title: "IoT, WEB - Monitoring and controlling irrigation gates",
     description:
       "This project was created at the request of a client who used our services.",
     type: "Team",
@@ -49,12 +49,21 @@ const portfolioItems = [
   {
     src: "./assets/img/Portofolio/Mobile-monitoring(S,K,P,A,L).png",
     category: ["IoT", "Mobile"],
-    title:
-      "Mobile - Mobile-React_Native-Monitoring-Controlig-Suhu-Kelembaban-PHTanah-Lampu-Air",
+    title: "Mobile - Monitoring Aplication (React Native)",
     description:
       "The project was developed to meet the client's needs, with a focus on monitoring and controlling critical parameters such as temperature, humidity, soil pH, water quality and lighting systems. By utilizing state-of-the-art technology, this project aims to provide precise control and increased efficiency in management.",
     type: "Individual",
     link: "https://github.com/usama09-cpu/Mobile-React_Native-Monitoring-Controlig-Suhu-Kelembaban-PHTanah-Lampu-Air.git",
+  },
+  {
+    src: "./assets/img/Portofolio/AsetDLHPalu.png",
+    category: ["WEB", "API"],
+    title:
+      "Web - Asset Inventory and Management Portal for Palu City Environmental Department",
+    description:
+      "This portal was developed as part of a community service program to support the Digital Asset Management System implementation at Palu City Environmental Department, enhancing transparency and efficiency in municipal asset administration.",
+    type: "Team",
+    link: "https://github.com/usama09-cpu/WEB-Pendataan_Aset_DLH_Kota_Palu.git",
   },
 ];
 
