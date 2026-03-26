@@ -13,9 +13,9 @@ const portfolioItems = [
   {
     src: "./assets/img/Portofolio/pcb_deffect.jpeg",
     category: ["DL"],
-    title: "EUFORIA - PCB DEffect",
+    title: "EUFORIA - PCB Defect Detection",
     description:
-      "This project was created to fulfill the final project requirements for graduating from MSIB5 Startup Campus - Artificial Intelligence.",
+      "This project was developed as a final project for the MSIB5 Startup Campus Artificial Intelligence program.",
     type: "Team",
     link: "https://github.com/usama09-cpu/Euforia.git",
   },
@@ -73,7 +73,7 @@ const Portofolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const categories = Array.from(
-    new Set(portfolioItems.flatMap((item) => item.category))
+    new Set(portfolioItems.flatMap((item) => item.category)),
   );
   const types = Array.from(new Set(portfolioItems.map((item) => item.type)));
 
@@ -122,7 +122,7 @@ const Portofolio = () => {
     (item) =>
       (categoryFilters.length === 0 ||
         item.category.some((c) => categoryFilters.includes(c))) &&
-      (typeFilters.length === 0 || typeFilters.includes(item.type))
+      (typeFilters.length === 0 || typeFilters.includes(item.type)),
   );
 
   return (
@@ -190,7 +190,7 @@ const Portofolio = () => {
             {filteredItems.map((item, index) => (
               <div
                 className={`col-lg-4 col-md-6 mb-4 portfolio-item ${item.category.join(
-                  " "
+                  " ",
                 )}`}
                 key={index}
               >
