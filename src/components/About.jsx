@@ -28,12 +28,7 @@ const About = () => {
                 Robotics.
               </h3>
               <p className="text-justify">
-                I am an Informatics Engineering student at Tadulako University
-                who has a great passion for learning and pursuing a career in
-                the IT world. What I like about this field is the constant
-                challenges—the deeper we learn, the more we realize that there
-                is still a lot to learn. This drives me to continue to grow and
-                adapt to the ever-changing technology.
+                I am a Bachelor of Informatics Engineering from Tadulako University with a strong passion for AI-powered systems, Embedded Systems, and Software Development. Experienced in developing intelligent automation systems and hardware-software integration projects using modern technologies.
               </p>
               <div className="row mb-3">
                 <div className="col-sm-6 py-2">

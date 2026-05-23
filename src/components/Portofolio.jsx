@@ -3,67 +3,83 @@ import { useState } from "react";
 const portfolioItems = [
   {
     src: "./assets/img/Portofolio/Monitoring_gates.png",
-    category: ["IoT", "Web"],
-    title: "IoT, WEB - Monitoring and controlling irrigation gates",
+    category: ["IoT", "WEB"],
+    title: "IoT-Based Irrigation Gate Monitoring and Control System",
     description:
-      "This project was created at the request of a client who used our services.",
+      "This project was developed based on client requirements to monitor and control irrigation gates through a web-based IoT system for real-time monitoring and operational management.",
     type: "Team",
     link: "https://github.com/usama09-cpu/WEB-Monitoring_dan_Kontrol_Gerbang.git",
   },
+
   {
     src: "./assets/img/Portofolio/pcb_deffect.jpeg",
-    category: ["DL"],
-    title: "EUFORIA - PCB Defect Detection",
+    category: ["AI", "COMPUTER VISION"],
+    title: "PCB Defect Detection System",
     description:
-      "This project was developed as a final project for the MSIB5 Startup Campus Artificial Intelligence program.",
+      "This project was developed as the final project for the MSIB5 Startup Campus Artificial Intelligence program, focusing on AI-based PCB defect detection using deep learning and computer vision technologies.",
     type: "Team",
     link: "https://github.com/usama09-cpu/Euforia.git",
   },
+
   {
     src: "./assets/img/Portofolio/patient_monitor.png",
-    category: ["IoT"],
-    title: "Mp4 hd - Patient monitor",
+    category: ["IoT", "EMBEDDED"],
+    title: "IoT-Based Patient Monitoring System",
     description:
-      "This project was created to fulfill the final project requirements for MSIB6 Stechoq - Hardware Engineering graduation.",
+      "This project was developed to fulfill the final project requirements for the MSIB6 Stechoq Hardware Engineering program, focusing on real-time patient monitoring using IoT and embedded system technologies.",
     type: "Team",
     link: "https://github.com/usama09-cpu/IOT-MP4HD-Patient_Monitor.git",
   },
+
   {
     src: "./assets/img/Portofolio/web_pramuka.png",
-    category: ["Web"],
-    title: "Landing page - pramuka smansa poso",
+    category: ["WEB", "FRONTEND"],
+    title: "Scout Organization Landing Page Website",
     description:
-      "This project was created as a gift for the Poso SMANSA scouts.",
+      "This project was developed as a landing page website for the SMANSA Poso scout organization to provide organizational information and improve digital presence.",
     type: "Individual",
     link: "https://github.com/usama09-cpu/WEB-Frontend-React--pramuka_smansa_poso.git",
   },
+
   {
     src: "./assets/img/Portofolio/Monitoring_tumbuhan.png",
-    category: ["IoT"],
-    title: "IoT - Plant Monitoring",
+    category: ["IoT", "AI"],
+    title: "IoT-Based Plant Monitoring System",
     description:
-      "This project was developed at the request of a client, focusing on the research and analysis of plants. In this project, I was responsible for implementing technology-based solutions to assist in the collection and processing of plant-related data. The approach used prioritizes efficiency and accuracy in supporting research needs, as well as fostering a deeper understanding of plant characteristics. By utilizing cutting-edge technology, this project successfully delivered significant results and met the client’s expectations.",
+      "This project was developed based on client requirements for plant monitoring and analysis using IoT technology to support efficient data collection and environmental monitoring processes.",
     type: "Individual",
     link: "https://github.com/usama09-cpu/IOT-Monitoring_Tumbuhan.git",
   },
+
   {
     src: "./assets/img/Portofolio/Mobile-monitoring(S,K,P,A,L).png",
-    category: ["IoT", "Mobile"],
-    title: "Mobile - Monitoring Aplication (React Native)",
+    category: ["MOBILE", "IoT"],
+    title: "Mobile Monitoring and Control Application",
     description:
-      "The project was developed to meet the client's needs, with a focus on monitoring and controlling critical parameters such as temperature, humidity, soil pH, water quality and lighting systems. By utilizing state-of-the-art technology, this project aims to provide precise control and increased efficiency in management.",
+      "This mobile application was developed using React Native to monitor and control environmental parameters such as temperature, humidity, soil pH, water quality, and lighting systems in real-time.",
     type: "Individual",
     link: "https://github.com/usama09-cpu/Mobile-React_Native-Monitoring-Controlig-Suhu-Kelembaban-PHTanah-Lampu-Air.git",
   },
+
   {
     src: "./assets/img/Portofolio/AsetDLHPalu.png",
-    category: ["WEB", "API"],
+    category: ["WEB", "API", "FULLSTACK"],
     title:
-      "Web - Asset Inventory and Management Portal for Palu City Environmental Department",
+      "Asset Inventory and Management Portal for Palu City Environmental Department",
     description:
-      "This portal was developed as part of a community service program to support the Digital Asset Management System implementation at Palu City Environmental Department, enhancing transparency and efficiency in municipal asset administration.",
+      "This portal was developed to support digital asset management at the Palu City Environmental Department, improving transparency, efficiency, and administrative management through a web-based system.",
     type: "Team",
     link: "https://github.com/usama09-cpu/WEB-Pendataan_Aset_DLH_Kota_Palu.git",
+  },
+
+  {
+    src: "./assets/img/Portofolio/TA.jpeg",
+    category: ["AI", "COMPUTER VISION", "EMBEDDED"],
+    title: "AI-Based Automated Paint Can Defect Detection and Sorting System",
+    description:
+      "This project was developed as a final project focused on integrating YOLOv12, multi-camera computer vision, embedded systems, and conveyor automation for real-time paint can defect detection and automatic sorting.",
+    type: "Final Project",
+    link: "https://github.com/usama09-cpu",
   },
 ];
 
