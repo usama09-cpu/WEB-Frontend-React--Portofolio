@@ -218,6 +218,7 @@ const Portofolio = () => {
                     className="img-fluid rounded w-100 h-auto object-cover aspect-w-16 aspect-h-9 portfolio-img"
                     src={item.src}
                     alt={item.title}
+                    loading="lazy"
                   />
                 </div>
               </div>
