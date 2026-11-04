@@ -81,6 +81,17 @@ const portfolioItems = [
     type: "Final Project",
     link: "https://github.com/usama09-cpu",
   },
+
+  {
+    src: "./assets/img/Portofolio/PosMitraMajuBangunan.png",
+    category: ["WEB", "API", "FULLSTACK"],
+    title:
+      "Point of Sale (POS) and Inventory Management System for Mitra Maju Bangunan",
+    description:
+      "This project was developed as a full-stack Point of Sale (POS) and inventory management system using Next.js, TypeScript, NestJS, PostgreSQL, and Tailwind CSS, featuring Role-Based Access Control (RBAC), product catalog and stock management, expense recording, and multi-method payment support to improve cashier workflow efficiency and administrative oversight.",
+    type: "Individual",
+    link: "https://github.com/usama09-cpu",
+  },
 ];
 
 const Portofolio = () => {
@@ -160,9 +171,8 @@ const Portofolio = () => {
             <div className="col-12 text-center mb-2">
               <ul className="list-inline mb-4" id="portfolio-flters">
                 <li
-                  className={`btn btn-sm btn-outline-primary m-1 ${
-                    categoryFilters.length === 0 ? "active" : ""
-                  }`}
+                  className={`btn btn-sm btn-outline-primary m-1 ${categoryFilters.length === 0 ? "active" : ""
+                    }`}
                   onClick={() => handleCategoryFilterClick("All Categories")}
                 >
                   All Categories
@@ -170,9 +180,8 @@ const Portofolio = () => {
                 {categories.map((category) => (
                   <li
                     key={category}
-                    className={`btn btn-sm btn-outline-primary m-1 ${
-                      categoryFilters.includes(category) ? "active" : ""
-                    }`}
+                    className={`btn btn-sm btn-outline-primary m-1 ${categoryFilters.includes(category) ? "active" : ""
+                      }`}
                     onClick={() => handleCategoryFilterClick(category)}
                   >
                     {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -181,9 +190,8 @@ const Portofolio = () => {
               </ul>
               <ul className="list-inline mb-4" id="portfolio-type-flters">
                 <li
-                  className={`btn btn-sm btn-outline-primary m-1 ${
-                    typeFilters.length === 0 ? "active" : ""
-                  }`}
+                  className={`btn btn-sm btn-outline-primary m-1 ${typeFilters.length === 0 ? "active" : ""
+                    }`}
                   onClick={() => handleTypeFilterClick("All Types")}
                 >
                   All Types
@@ -191,9 +199,8 @@ const Portofolio = () => {
                 {types.map((type) => (
                   <li
                     key={type}
-                    className={`btn btn-sm btn-outline-primary m-1 ${
-                      typeFilters.includes(type) ? "active" : ""
-                    }`}
+                    className={`btn btn-sm btn-outline-primary m-1 ${typeFilters.includes(type) ? "active" : ""
+                      }`}
                     onClick={() => handleTypeFilterClick(type)}
                   >
                     {type.charAt(0).toUpperCase() + type.slice(1)}
