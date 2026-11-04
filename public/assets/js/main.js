@@ -11,9 +11,9 @@
     });
 
 
-    // Smooth scrolling on the navbar links
-    $(".navbar-nav a").on('click', function (event) {
-        if (this.hash !== "") {
+    // Smooth scrolling on the navbar links (delegated for React rendering)
+    $(document).on('click', '.navbar-nav a, .navbar-brand', function (event) {
+        if (this.hash !== "" && $(this.hash).length) {
             event.preventDefault();
             
             $('html, body').animate({
@@ -24,38 +24,30 @@
                 $('.navbar-nav .active').removeClass('active');
                 $(this).closest('a').addClass('active');
             }
+
+            if ($('.navbar-collapse').hasClass('show')) {
+                $('.navbar-collapse').collapse('hide');
+            }
         }
     });
 
 
-    // Typed Initiate
-    if ($('.typed-text-output').length == 1) {
-        var typed_strings = $('.typed-text').text();
-        var typed = new Typed('.typed-text-output', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
-    }
-
-
-    // Modal Video
+    // Modal Video (delegated for React rendering)
     $(document).ready(function () {
         var $videoSrc;
-        $('.btn-play').click(function () {
+        $(document).on('click', '.btn-play', function () {
             $videoSrc = $(this).data("src");
         });
-        console.log($videoSrc);
 
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
+        $(document).on('shown.bs.modal', '#videoModal', function () {
+            if ($videoSrc) {
+                $("#video").attr('src', $videoSrc + "?autoplay=1&modestbranding=1&showinfo=0");
+            }
+        });
 
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
+        $(document).on('hide.bs.modal', '#videoModal', function () {
+            $("#video").attr('src', $videoSrc || "");
+        });
     });
 
 
@@ -75,19 +67,6 @@
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
-
-
-    // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
-
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
     
     
     // Back to top button
@@ -114,4 +93,3 @@
     });
     
 })(jQuery);
-

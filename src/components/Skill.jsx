@@ -17,7 +17,9 @@ const skills = [
   { name: "React Native" },
   { name: "Node.js" },
   { name: "Express.js" },
+  { name: "NestJS" },
   { name: "MySQL" },
+  { name: "PostgreSQL" },
 
   // 🧠 AI & Data
   { name: "Python" },
@@ -81,6 +83,7 @@ const Skill = () => {
                 <defs>
                   <linearGradient
                     id="gradient"
+                    gradientUnits="userSpaceOnUse"
                     x1="0%"
                     y1="0%"
                     x2="100%"

@@ -62,7 +62,7 @@ const About = () => {
               >
                 Hire Me
               </a>
-              <a href="#" className="btn btn-outline-primary">
+              <a href="#qualification" className="btn btn-outline-primary">
                 Learn More
               </a>
             </div>

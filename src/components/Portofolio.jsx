@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const portfolioItems = [
   {
@@ -98,6 +98,33 @@ const Portofolio = () => {
   const [categoryFilters, setCategoryFilters] = useState([]);
   const [typeFilters, setTypeFilters] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setSelectedProject(null);
+      }
+    };
+
+    if (selectedProject) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedProject]);
+
+  const handleImageError = (e, title) => {
+    e.currentTarget.onerror = null;
+    e.currentTarget.src = `data:image/svg+xml;utf8,${encodeURIComponent(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450"><rect width="100%" height="100%" fill="#0BCEAF"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-family="Roboto, sans-serif" font-size="24" font-weight="bold">${title}</text></svg>`,
+    )}`;
+  };
 
   const categories = Array.from(
     new Set(portfolioItems.flatMap((item) => item.category)),
@@ -210,12 +237,12 @@ const Portofolio = () => {
             </div>
           </div>
           <div className="row portfolio-container">
-            {filteredItems.map((item, index) => (
+            {filteredItems.map((item) => (
               <div
                 className={`col-lg-4 col-md-6 mb-4 portfolio-item ${item.category.join(
                   " ",
                 )}`}
-                key={index}
+                key={item.title}
               >
                 <div
                   className="position-relative overflow-hidden mb-2"
@@ -226,6 +253,7 @@ const Portofolio = () => {
                     src={item.src}
                     alt={item.title}
                     loading="lazy"
+                    onError={(e) => handleImageError(e, item.title)}
                   />
                 </div>
               </div>
@@ -237,25 +265,42 @@ const Portofolio = () => {
                 className="modal-overlay"
                 onClick={() => setSelectedProject(null)}
               ></div>
-              <div className="modal show" style={{ display: "block" }}>
-                <div className="modal-dialog modal-dialog-centered">
+              <div
+                className="modal show"
+                style={{ display: "block" }}
+                onClick={() => setSelectedProject(null)}
+              >
+                <div
+                  className="modal-dialog modal-dialog-centered"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   <div className="modal-content">
-                    <div className="modal-header flex align-items-center">
+                    <div className="modal-header d-flex align-items-center justify-content-between">
                       <h5 className="modal-title">{selectedProject.title}</h5>
                       <button
                         type="button"
-                        className="btn-close bg-primary border-primary w-[20px]"
+                        className="close"
+                        aria-label="Close"
                         onClick={() => setSelectedProject(null)}
-                      ></button>
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
                     </div>
                     <div className="bodymodal modal-body">
                       <img
                         className="img-fluid w-100 rounded mb-3"
                         src={selectedProject.src}
                         alt={selectedProject.title}
+                        onError={(e) =>
+                          handleImageError(e, selectedProject.title)
+                        }
                       />
                       <p className="text-justify">
                         {selectedProject.description}
+                      </p>
+                      <p>
+                        <strong>Category :</strong>{" "}
+                        {selectedProject.category.join(", ")}
                       </p>
                       <p>
                         <strong>Type :</strong> {selectedProject.type}
@@ -267,7 +312,6 @@ const Portofolio = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {/* {selectedProject.link} */}
                           Click Here
                         </a>
                       </p>

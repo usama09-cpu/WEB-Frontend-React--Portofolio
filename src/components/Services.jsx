@@ -55,9 +55,9 @@ const services = [
   },
   {
     icon: "fa-paint-brush",
-    title: "Deign & Multimedia",
+    title: "Design & Multimedia",
     description:
-      "Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita",
+      "Creative visual design and multimedia editing solutions tailored to elevate your brand identity. We craft engaging graphics, illustrations, and video content with precision and artistic flair for digital and print media.",
   },
 ];
 
@@ -89,7 +89,7 @@ const Services = () => {
                 <p className="text-justify">{service.description}</p>
                 <a
                   className="border-bottom border-primary text-decoration-none"
-                  href=""
+                  href="#portfolio"
                 >
                   Read More
                 </a>

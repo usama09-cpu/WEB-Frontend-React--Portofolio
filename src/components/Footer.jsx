@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="d-flex justify-content-center mb-4">
             <a
               className="btn btn-light btn-social mr-2"
-              href="mailto:uusaamaa_@gmail.com"
+              href="mailto:uusaamaa0901@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
